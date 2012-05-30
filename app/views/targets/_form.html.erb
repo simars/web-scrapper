@@ -16,11 +16,11 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :location %><br />
+    <%= f.label "Location ex url or Script or expression that builds an array of locations " %><br />
     <%= f.text_area :location %>
   </div>
   <div class="field">
-    <%= f.label :script %><br />
+    <%= f.label "Extractor script location (Proc.new |location, target| { <script> } "%><br />
     <%= f.text_area :script %>
   </div>
   <div class="field">

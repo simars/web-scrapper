@@ -16,13 +16,18 @@ module JustDialScrapper
   def self.getItems(location)
     item_collection = []
     doc = Nokogiri::HTML(open(location))
-    doc.css('div .logoDesc').each do |element|
+    doc.css('.Ctitle > a').each do |element|
       item = Item.new
       item.source=location
-      item.contact=  try {element.inner_html.scan(/(\+\(\d+\).*\d+)\</)[0]}
-      item.description = try {element.children[0].text}
-      item.link = try {element.children[1].attributes['href'].value }
-      item.detail = element.inner_html
+      item.link = element.attributes['href'].value rescue "error"
+      item.link = item.link.gsub!('<','3C').gsub('>','3E')
+      item.name = element.text;
+      itemDoc = Nokogiri::HTML(open(item.link))
+      if item.link
+        item.contact = itemDoc.at_css('.contName + span').text rescue "error"
+        item.phone =  itemDoc.at_css('.contPhone + span').text rescue "error"
+        item.address = itemDoc.at_css('.contAdd + span').gsub!('View Map | Locate on Map','').text rescue "error"
+      end
       if block_given?
         item = yield item
       end

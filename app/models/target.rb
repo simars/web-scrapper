@@ -18,7 +18,7 @@ class Target < ActiveRecord::Base
     @locations = eval "[#{location}]" unless @locations || @locations.kind_of?(Array)
     puts @locations
     @locations.each do |loc|
-      item_collection = script_proc.call(loc) if script_proc
+      item_collection = script_proc.call(loc, self) if script_proc
       item_collection = getItems(loc) unless item_collection || item_collection.kind_of?(Array)
       item_collection.each { |item|  items <<  item } if item_collection
     end
@@ -30,7 +30,7 @@ class Target < ActiveRecord::Base
    end
 
    def script_proc
-     @script_proc ||= self.eval_safely("Proc.new { #{script} }") unless script.blank?
+     @script_proc ||= self.eval_safely("Proc.new do \n |location, target| \n #{script} \n end") unless script.blank?
      @script_proc
    end
 
