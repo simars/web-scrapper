@@ -23,9 +23,9 @@
     <td><%= item.name %></td>
     <td><%= item.contact %></td>
     <td><%= item.phone %></td>
-    <td><%= item.website %></td>
+    <td><%= link_to item.website , 'http://' + item.website.squish[0..-3] , :target => "_blank" %></td>
     <td><%= item.address %></td>
-    <td><%= link_to 'link',  item.link %></td>
+    <td><%= link_to 'link', item.link , :target => "_blank" %></td>
     <td><%= item.description %></td>
     <!--<td><%= item.detail %></td>-->
     <td><%= item.source %></td>
