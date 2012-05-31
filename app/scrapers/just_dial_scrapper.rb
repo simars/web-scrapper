@@ -28,6 +28,9 @@ module JustDialScrapper
           item.contact = itemDoc.at_css('.contName + span').text rescue "error"
           item.phone =  itemDoc.at_css('.contPhone + span').text rescue "error"
           item.address = itemDoc.at_css('.contAdd + span').text.gsub!('View Map | Locate on Map','') rescue "error"
+          item.website = itemDoc.at_css('.contWeb + span').text rescue "error"
+          item.detail = itemDoc.at_css('#compdetails').text rescue "error"
+          item.description = itemDoc.at_css('#contact').text rescue "error"
         end
         if block_given?
           item = yield item

@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Contact</th>
     <th>Phone</th>
+    <th>Website</th>
     <th>Address</th>
     <th>Link</th>
     <th>Description</th>
@@ -22,8 +23,9 @@
     <td><%= item.name %></td>
     <td><%= item.contact %></td>
     <td><%= item.phone %></td>
+    <td><%= item.website %></td>
     <td><%= item.address %></td>
-    <td><%= item.link %></td>
+    <td><%= link_to 'link',  item.link %></td>
     <td><%= item.description %></td>
     <!--<td><%= item.detail %></td>-->
     <td><%= item.source %></td>
