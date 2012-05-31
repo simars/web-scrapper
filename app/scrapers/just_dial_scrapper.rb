@@ -33,7 +33,7 @@ module JustDialScrapper
           item = yield item
         end
         item_collection << item
-      rescue exception => e
+      rescue Exception => e
         puts e
       end
     end
