@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120531053410) do
+ActiveRecord::Schema.define(:version => 20120603144147) do
 
   create_table "items", :force => true do |t|
     t.text     "name"
@@ -27,7 +27,20 @@ ActiveRecord::Schema.define(:version => 20120531053410) do
     t.string   "phone"
     t.text     "phone_other"
     t.text     "address"
-    t.string   "website"
+    t.text     "website"
+    t.string   "lead_no"
+    t.string   "last_name"
+    t.string   "lead_source"
+    t.string   "email"
+    t.string   "industry"
+    t.string   "secondary_email"
+    t.string   "assigned_to"
+    t.string   "postal_code"
+    t.string   "city"
+    t.string   "country"
+    t.string   "state"
+    t.string   "role"
+    t.string   "lead_status"
   end
 
   create_table "targets", :force => true do |t|
