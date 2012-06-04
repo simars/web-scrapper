@@ -19,34 +19,102 @@
     <%= f.label "Location ex url or Script or expression that builds an array of locations " %><br />
     <%= f.text_area :location %>
   </div>
-  <div class="field">
+  <!--div class="field">
     <%= f.label "Extractor script location (Proc.new |location, target| { <script> } "%><br />
     <%= f.text_area :script %>
-  </div>
+  </div-->
 
-  <div class="field">
+  <!--div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
-  </div>
+  </div-->
 
   <div class="field">
     <%= f.label :lead_source %><br />
-    <%= f.text_field :lead_source %>
+    <select id="target_lead_source" name="target[lead_source]">
+      <option value="Existing Customer" >	Existing Customer	</option>
+      <option value="Self Generated" >	Self Generated	</option>
+      <option value="Employee" >	Employee	</option>
+      <option value="Partner" >	Partner	</option>
+      <option value="Public Relations" >	Public Relations	</option>
+      <option value="Direct Mail" >	Direct Mail	</option>
+      <option value="Conference" >	Conference	</option>
+      <option value="Trade Show" >	Trade Show	</option>
+      <option value="Word of mouth" >	Word of mouth	</option>
+      <option value="Other" >	Other	</option>
+      <option value="Friends Contact" >	Friends Contact	</option>
+      <option value="India Mart" >	India Mart	</option>
+      <option value="Just Dial" selected>	Just Dial	</option>
+      <option value="News Paper" >	News Paper	</option>
+      <option value="Online Voucher" >	Online Voucher	</option>
+      <option value="Sulekha" >	Sulekha	</option>
+      <option value="Yellow Pages" >	Yellow Pages	</option>
+      <option value="Haatopia Website" >	Haatopia Website	</option>
+
+    </select>
+    <!-- %= f.text_field :lead_source %-->
   </div>
 
   <div class="field">
     <%= f.label :industry %><br />
-    <%= f.text_field :industry %>
+    <!--%= f.text_field :industry %-->
+    <select id="target_industry" name="target[industry]">
+        <option value="0" >     Please Select	</option>
+        <option value="Event Management" >	Event Management	</option>
+<option value="Consulting" >	Consulting	</option>
+<option value="Education" >	Education	</option>
+<option value="Electronics" >	Electronics	</option>
+<option value="Entertainment" >	Entertainment	</option>
+<option value="Finance" >	Finance	</option>
+<option value="Government" >	Government	</option>
+<option value="Healthcare" >	Healthcare	</option>
+<option value="Hospitality" >	Hospitality	</option>
+<option value="Insurance" >	Insurance	</option>
+<option value="Not For Profit" >	Not For Profit	</option>
+<option value="Retail" >	Retail	</option>
+<option value="Other" >	Other	</option>
+<option value="Astrology" >	Astrology	</option>
+<option value="Coaching Classes" >	Coaching Classes	</option>
+<option value="Community" >	Community	</option>
+<option value="Company Website" >	Company Website	</option>
+<option value="Flowers" >	Flowers	</option>
+<option value="Furniture" >	Furniture	</option>
+<option value="Home Furnishing" >	Home Furnishing	</option>
+<option value="Tour and Travel" >	Tour and Travel	</option>
+<option value="Car Rental" >	Car Rental	</option>
+<option value="Wedding" >	Wedding	</option>
+<option value="Packer and Mover" >	Packer and Mover	</option>
+<option value="Placements & Careers" >	Placements & Careers	</option>
+<option value="Hobby Classes" >	Hobby Classes	</option>
+<option value="Beauty Salons & Spa" >	Beauty Salons & Spa	</option>
+<option value="Pets & Accessories" >	Pets & Accessories	</option>
+    </select>
   </div>
 
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <!--%= f.text_field :city %-->
+    <select  id="target_city" name="target[city]" >
+      <option value="0" >     Please Select	</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Indore">Indore</option>
+      <option value="Jaipur">Jaipur</option>
+      <option value="Pune">Pune</option>
+      <option value="Mumbai">Mumbai</option>
+
+    </select>
   </div>
 
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <!--%= f.text_field :state %-->
+    <select id="target_state" name="target[state]" >
+      <option value="0" >     Please Select	</option>
+      <option value="Maharastra">Maharastra</option>
+      <option value="Madhya Pradesh">Madhya Pradesh</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Rajasthan">Rajasthan</option>
+    </select>
   </div>
 
 

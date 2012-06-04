@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20120604022858) do
     t.string   "phone"
     t.text     "phone_other"
     t.text     "address"
-    t.string   "website"
+    t.text     "website"
     t.string   "lead_no"
     t.string   "last_name"
     t.string   "lead_source"
