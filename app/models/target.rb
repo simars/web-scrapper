@@ -19,7 +19,7 @@ class Target < ActiveRecord::Base
     puts @locations
     @locations.each do |loc|
       item_collection = script_proc.call(loc, self) if script_proc
-      item_collection = getItems(loc) unless item_collection || item_collection.kind_of?(Array)
+      item_collection = getItems(loc, self) unless item_collection || item_collection.kind_of?(Array)
       item_collection.each { |item|  items <<  item } if item_collection
     end
   end
