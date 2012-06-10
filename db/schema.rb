@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20120604022858) do
     t.string   "container_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "phone"
+    t.text     "phone"
     t.text     "phone_other"
     t.text     "address"
     t.text     "website"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(:version => 20120604022858) do
     t.string   "email"
     t.string   "industry"
     t.string   "secondary_email"
-    t.string   "assigned_to"
+    t.string   "assigned_to",     :default => "admin"
     t.string   "postal_code"
     t.string   "city"
     t.string   "country"
     t.string   "state"
     t.string   "role"
-    t.string   "lead_status"
+    t.string   "lead_status",     :default => "new"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
