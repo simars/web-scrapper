@@ -7,6 +7,8 @@ WebScrapper::Application.routes.draw do
 
   resources :targets
 
+  resources :just_dial_targets
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

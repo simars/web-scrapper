@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120604022858) do
+ActiveRecord::Schema.define(:version => 20120617072031) do
 
   create_table "items", :force => true do |t|
     t.text     "name"
@@ -24,23 +24,23 @@ ActiveRecord::Schema.define(:version => 20120604022858) do
     t.string   "container_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "phone"
+    t.string   "phone"
     t.text     "phone_other"
     t.text     "address"
-    t.text     "website"
+    t.string   "website"
     t.string   "lead_no"
     t.string   "last_name"
     t.string   "lead_source"
     t.string   "email"
     t.string   "industry"
     t.string   "secondary_email"
-    t.string   "assigned_to",     :default => "admin"
+    t.string   "assigned_to"
     t.string   "postal_code"
     t.string   "city"
     t.string   "country"
     t.string   "state"
     t.string   "role"
-    t.string   "lead_status",     :default => "new"
+    t.string   "lead_status"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20120604022858) do
     t.text     "state"
     t.text     "country",     :default => "India"
     t.text     "assigned_to", :default => "admin"
+    t.string   "target_type"
   end
 
   create_table "users", :force => true do |t|
