@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @target.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <pre class="code">
+    <%= @target.location %>
+  </pre>
+</p>
+
+<p>
+  <b>Script:</b>
+  <pre class="code">
+    <%= @target.script %>
+  </pre>
+
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @target.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_just_dial_target_path(@target) %> |
+<%= link_to 'Back', just_dial_targets_path %>
