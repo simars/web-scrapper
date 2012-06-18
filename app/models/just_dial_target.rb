@@ -6,16 +6,17 @@
 #
 
 class JustDialTarget < Target
-  attr_accessor :url, :start_page, :end_page
   after_validation :build_locations_script
-end
+  def build_locations_script
 
-def build_locations_script
-  @locations =
+  self.location =
       " sites = []
-          x = '#{url}/page-'
-          (#{start_page}..#{end_page}).each do |i|
+          x = '#{self.url}/page-'
+          (1..#{self.num_of_pages.to_s}).each do |i|
           sites << x + i.to_s
         end
       sites"
+  end
+
 end
+

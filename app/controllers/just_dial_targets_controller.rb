@@ -41,9 +41,6 @@ class JustDialTargetsController < ApplicationController
   # POST /just_dial_targets.json
   def create
     @target = JustDialTarget.new(params[:target])
-    @target.url = params[:url]
-    @target.start_page = params[:start_page]
-    @target.end_page = params[:end_page]
     respond_to do |format|
       if @target.save
         format.html { redirect_to @target, notice: 'Target was successfully created.' }
@@ -59,9 +56,6 @@ class JustDialTargetsController < ApplicationController
   # PUT /just_dial_targets/1.json
   def update
     @target = JustDialTarget.find(params[:id])
-    @target.url = params[:url]
-    @target.start_page = params[:start_page]
-    @target.end_page = params[:end_page]
     respond_to do |format|
       if @target.update_attributes(params[:target])
         format.html { redirect_to @target, notice: 'Target was successfully updated.' }
