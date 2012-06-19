@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120617072031) do
+ActiveRecord::Schema.define(:version => 20120618025659) do
 
   create_table "items", :force => true do |t|
     t.text     "name"
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20120617072031) do
     t.string   "state"
     t.string   "role"
     t.string   "lead_status"
+    t.string   "url"
+    t.string   "num_of_pages"
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -67,9 +69,11 @@ ActiveRecord::Schema.define(:version => 20120617072031) do
     t.text     "industry"
     t.text     "city"
     t.text     "state"
-    t.text     "country",     :default => "India"
-    t.text     "assigned_to", :default => "admin"
+    t.text     "country",      :default => "India"
+    t.text     "assigned_to",  :default => "admin"
     t.string   "target_type"
+    t.string   "url"
+    t.integer  "num_of_pages"
   end
 
   create_table "users", :force => true do |t|
