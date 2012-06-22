@@ -9,16 +9,15 @@ class JustDialTarget < Target
   after_validation :build_locations_script
 
   def build_locations_script
-      self.location = create_script(url,num_of_pages.to_i);
+      self.location = JustDialTarget.create_location_script(url,num_of_pages);
   end
 
-  def create_script(url,num_of_pages)
+  def self.create_location_script(url,num_of_pages)
        sites = []
-          x = url;
-          (1..num_of_pages).each do |i|
-          sites << x + i.to_s
+      (1..num_of_pages).each do |i|
+          sites << "#{url}/page-#{i.to_s}"
           end
-      sites.to_s;
+      sites.to_s
   end
 
 end
