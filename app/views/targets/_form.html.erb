@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label "Location ex url or Script or expression that builds an array of locations " %><br />
-    <%= f.text_area :location %>
+    <%= f.text_area :location ,:rows=>6, :cols=>80%>
   </div>
   <!--div class="field">
     <%= f.label "Extractor script location (Proc.new |location, target| { <script> } "%><br />
@@ -60,34 +60,104 @@
     <!--%= f.text_field :industry %-->
     <select id="target_industry" name="target[industry]">
         <option value="0" >     Please Select	</option>
-        <option value="Event Management" >	Event Management	</option>
-<option value="Consulting" >	Consulting	</option>
-<option value="Education" >	Education	</option>
-<option value="Electronics" >	Electronics	</option>
-<option value="Entertainment" >	Entertainment	</option>
-<option value="Finance" >	Finance	</option>
-<option value="Government" >	Government	</option>
-<option value="Healthcare" >	Healthcare	</option>
-<option value="Hospitality" >	Hospitality	</option>
-<option value="Insurance" >	Insurance	</option>
-<option value="Not For Profit" >	Not For Profit	</option>
-<option value="Retail" >	Retail	</option>
-<option value="Other" >	Other	</option>
-<option value="Astrology" >	Astrology	</option>
-<option value="Coaching Classes" >	Coaching Classes	</option>
-<option value="Community" >	Community	</option>
-<option value="Company Website" >	Company Website	</option>
-<option value="Flowers" >	Flowers	</option>
-<option value="Furniture" >	Furniture	</option>
-<option value="Home Furnishing" >	Home Furnishing	</option>
-<option value="Tour and Travel" >	Tour and Travel	</option>
-<option value="Car Rental" >	Car Rental	</option>
-<option value="Wedding" >	Wedding	</option>
-<option value="Packer and Mover" >	Packer and Mover	</option>
-<option value="Placements & Careers" >	Placements & Careers	</option>
-<option value="Hobby Classes" >	Hobby Classes	</option>
-<option value="Beauty Salons & Spa" >	Beauty Salons & Spa	</option>
-<option value="Pets & Accessories" >	Pets & Accessories	</option>
+<option value="Advertising Agencies">Advertising Agencies</option>
+<option value="Aerobic Classes">Aerobic Classes</option>
+<option value="Animal Care Services">Animal Care Services</option>
+<option value="Antiques Collectibles">Antiques Collectibles</option>
+<option value="Apartment Hotels">Apartment Hotels</option>
+<option value="Architects">Architects</option>
+<option value="Art Galleries">Art Galleries</option>
+<option value="Arts & Crafts">Arts & Crafts</option>
+<option value="Astrology">Astrology</option>
+<option value="Automobile Rentals">Automobile Rentals</option>
+<option value="Bakeries">Bakeries</option>
+<option value="Beauty Salons & Spa">Beauty Salons & Spa</option>
+<option value="Boarding Schools">Boarding Schools</option>
+<option value="Boutiques">Boutiques</option>
+<option value="Business & Professional Associations">Business & Professional Associations</option>
+<option value="Car Rental">Car Rental</option>
+<option value="Caterers">Caterers</option>
+<option value="Cctv Dealers">Cctv Dealers</option>
+<option value="Child Care">Child Care</option>
+<option value="Choreographers">Choreographers</option>
+<option value="Cleaning Services">Cleaning Services</option>
+<option value="Clubs">Clubs</option>
+<option value="Coaching Classes">Coaching Classes</option>
+<option value="Community">Community</option>
+<option value="Company Website">Company Website</option>
+<option value="Compter Sales Services">Compter Sales Services</option>
+<option value="Consultants">Consultants</option>
+<option value="Consulting">Consulting</option>
+<option value="Cookery Classes">Cookery Classes</option>
+<option value="Dance Classes">Dance Classes</option>
+<option value="Dentist">Dentist</option>
+<option value="Detective Agencies">Detective Agencies</option>
+<option value="Education">Education</option>
+<option value="Electronics">Electronics</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Event Management">Event Management</option>
+<option value="Fashion Designing">Fashion Designing</option>
+<option value="Finance">Finance</option>
+<option value="Fitness Centre">Fitness Centre</option>
+<option value="Flowers">Flowers</option>
+<option value="Food & Drinks">Food & Drinks</option>
+<option value="Furniture">Furniture</option>
+<option value="Gift Shops">Gift Shops</option>
+<option value="Government">Government</option>
+<option value="Guitar Dealers">Guitar Dealers</option>
+<option value="Gymnasiums">Gymnasiums</option>
+<option value="Gynaecologists">Gynaecologists</option>
+<option value="Health Clubs">Health Clubs</option>
+<option value="Healthcare">Healthcare</option>
+<option value="Hobby Classes">Hobby Classes</option>
+<option value="Home Furnishing">Home Furnishing</option>
+<option value="Homeopathic">Homeopathic</option>
+<option value="Hospitality">Hospitality</option>
+<option value="Hostels">Hostels</option>
+<option value="Hotel">Hotel</option>
+<option value="House Keeping Services">House Keeping Services</option>
+<option value="Insurance">Insurance</option>
+<option value="Interior Design">Interior Design</option>
+<option value="Janitorial Supplies">Janitorial Supplies</option>
+<option value="Lawyer">Lawyer</option>
+<option value="Lifestyle">Lifestyle</option>
+<option value="Lodging">Lodging</option>
+<option value="Lodging Services">Lodging Services</option>
+<option value="Massage Centres">Massage Centres</option>
+<option value="Matrimonial Bureaus">Matrimonial Bureaus</option>
+<option value="Music Classes">Music Classes</option>
+<option value="Not For Profit">Not For Profit</option>
+<option value="Orchestras">Orchestras</option>
+<option value="Other">Other</option>
+<option value="Packer and Mover">Packer and Mover</option>
+<option value="Painting & Wallpaper Services">Painting & Wallpaper Services</option>
+<option value="Pest Control Services">Pest Control Services</option>
+<option value="Pets & Accessories">Pets & Accessories</option>
+<option value="Photographers">Photographers</option>
+<option value="Physiotherapists">Physiotherapists</option>
+<option value="Placements & Careers">Placements & Careers</option>
+<option value="Plant Nurseries">Plant Nurseries</option>
+<option value="Power Yoga Classes">Power Yoga Classes</option>
+<option value="Pre School">Pre School</option>
+<option value="Real Estate">Real Estate</option>
+<option value="Retail">Retail</option>
+<option value="Sales And Exhibitions">Sales And Exhibitions</option>
+<option value="Security Services">Security Services</option>
+<option value="Shopping Centers">Shopping Centers</option>
+<option value="Singing Classes">Singing Classes</option>
+<option value="Specialty Shops">Specialty Shops</option>
+<option value="Sporting Goods">Sporting Goods</option>
+<option value="Summer Camps">Summer Camps</option>
+<option value="Swimming Classes">Swimming Classes</option>
+<option value="Swimming Pools">Swimming Pools</option>
+<option value="Tour and Travel">Tour and Travel</option>
+<option value="Trophies Plaques">Trophies Plaques</option>
+<option value="Video Audio Services">Video Audio Services</option>
+<option value="Waste Management">Waste Management</option>
+<option value="Water Parks">Water Parks</option>
+<option value="Wedding">Wedding</option>
+<option value="Yoga Classes">Yoga Classes</option>
+
     </select>
   </div>
 
@@ -105,28 +175,9 @@
     </select>
   </div>
 
-  <div class="field">
-    <%= f.label :state %><br />
-    <!--%= f.text_field :state %-->
-    <select id="target_state" name="target[state]" >
-      <option value="0" >     Please Select	</option>
-      <option value="Maharastra">Maharastra</option>
-      <option value="Madhya Pradesh">Madhya Pradesh</option>
-      <option value="Delhi">Delhi</option>
-      <option value="Rajasthan">Rajasthan</option>
-    </select>
-  </div>
 
-
- <div class="field">
-   <%= f.label :country %><br />
-   <%= f.text_field :country %>
-  </div>
-
- <div class="field">
-   <%= f.label :assigned_to %><br />
-   <%= f.text_field :assigned_to %>
- </div>
+<input id="target_country" name="target[country]" size="30" type="hidden" value="India" />
+<input id="target_assigned_to" name="target[assigned_to]" size="30" type="hidden" value="admin" />
 
  <div class="actions">
     <%= f.submit %>
